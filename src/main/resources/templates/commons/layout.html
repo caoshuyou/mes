@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" >
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+  <link th:href="@{/static/bootstrap/css/bootstrap.min.css}" rel="stylesheet">
+     <!-- 加载 Bootstrap 的所有 JavaScript 插件。你也可以根据需要只加载单个插件。 -->
+    <script th:src="@{/static/bootstrap/js/bootstrap.min.js}" ></script>
+    <!-- jQuery (Bootstrap 的所有 JavaScript 插件都依赖 jQuery，所以必须放在前边) -->
+    <script th:src="@{/static/jquery/jquery.min.js}"></script>
+  <title>Hello</title>
+</head>
+<body>
+    <header class="header">
+        <div>
+            采用th:replace方式进行布局
+        </div>
+    </header>
+    <div  class="container" th:include="::content">页面正文内容</div>
+
+    <footer class="footer">
+    <div>
+        <p style="float: left">&copy; Hylun 2017</p>
+        <p style="float: right">
+            Powered by <a href="http://my.oschina.net/alun" target="_blank">Alun</a>
+        </p>
+    </div>
+    </footer>
+
+</body>
